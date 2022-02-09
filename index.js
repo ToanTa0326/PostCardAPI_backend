@@ -18,9 +18,8 @@ app.get('/', (req, res) => {
     res.send('Connect MERN_API_APP Successful!')
 })
 
-// const CONNECTION_URL = 'mongodb+srv://javascriptmastery:javascriptmastery123@cluster0.yk60x.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000;
-const URL = process.env.CONNECTION_URL || 'mongodb+srv://javascriptmastery:javascriptmastery123@cluster0.yk60x.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const URL = process.env.CONNECTION_URL;
 
 mongoose.connect(URL,{
     useNewUrlParser: true,
