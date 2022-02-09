@@ -20,8 +20,11 @@ app.get('/', (req, res) => {
 
 // const CONNECTION_URL = 'mongodb+srv://javascriptmastery:javascriptmastery123@cluster0.yk60x.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000;
-const URL = process.env.CONNECTION_URL;
+const URL = process.env.CONNECTION_URL || 'mongodb+srv://javascriptmastery:javascriptmastery123@cluster0.yk60x.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
-mongoose.connect(URL)
+mongoose.connect(URL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
     .then(() => app.listen(PORT, () => console.log(`server running on port: ${PORT}`)))
     .catch((err) => console.log(err));
