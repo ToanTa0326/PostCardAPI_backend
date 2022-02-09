@@ -18,8 +18,10 @@ app.get('/', (req, res) => {
     res.send('Connect MERN_API_APP Successful!')
 })
 
-const PORT = process.env.PORT || 5000;
+// test
+
 const URL = process.env.CONNECTION_URL;
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(URL,{
     useNewUrlParser: true,
