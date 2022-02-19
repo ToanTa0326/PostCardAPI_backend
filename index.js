@@ -16,7 +16,7 @@ app.use('/posts', postRoutes)
 app.use('/user', userRoutes)
 
 app.get('/', (req, res) => {
-    res.send('Connect MERN_API_APP Successful!')
+    res.send('Welcome to Memories API!')
 })
 
 // test
